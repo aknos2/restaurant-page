@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+header {
+    width: 100%;
+}
+
+#content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+nav {
+    display: flex;
+    height: 200px;
+    background-color: rgb(219, 66, 16, 0.9);
+    justify-content: center;
+    gap: 50px;
+    align-items:  flex-end;
+}
+
+nav button {
+    height: 50px;
+    width: 200px;
+    border-bottom: none;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+#home-images {
+    display: flex;
+    justify-content: center; /* Center items horizontally in the container */
+    align-items: center; /* Optional: Center items vertically in the container */
+    gap: 20px;
+}
+
+.menu-food-imgs {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center; /* Center the "Food" text under each image */
+    position: relative;
+}
+
+.menu-food-imgs p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+img {
+    width: 250px;
+    background-color: rgba(38, 19, 19, 0.5);
+}
+
+#address {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+#hours {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#hours h2 {
+    align-self: center;
+    margin-right: 30px;
+}
+
+#hours li {
+    list-style-type: none;
+}
+
+#hours ul {
+    margin: 0;
+    padding: 3px;
+}
