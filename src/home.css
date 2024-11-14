@@ -6,16 +6,21 @@
     --header-color: rgb(219, 66, 16, 0.9);
     --block-background-color: rgba(239, 220, 12, 0.5);
     --border-size: 2px solid orangered;
+    --box-shadow-block: 0px 2px 3px rgb(199, 120, 91, 0.9);
 }
 
 body {
     padding: 0;
     margin: 0;
-    background-color:azure;
+    background-color:rgb(240, 240, 227);
 }
 
 img {
     max-width: 100%;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 header {
@@ -89,6 +94,7 @@ img {
     margin-top: 50px;
     line-height: 1.5rem;
     background-color: var(--block-background-color);
+    box-shadow: var(--box-shadow-block);
 }
 
 #restaurant-summary h1{
@@ -97,6 +103,8 @@ img {
 
 #restaurant-summary p {
     padding: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 #access-info > h1 {
@@ -111,6 +119,7 @@ img {
     border: var(--border-size);
     padding: 20px;
     background-color: var(--block-background-color);
+    box-shadow: var(--box-shadow-block);
 }
 
 #hours {
