@@ -17,7 +17,8 @@ body {
 
 img {
     max-width: 100%;
-}
+    height: auto;
+  }
 
 button:hover {
     cursor: pointer;
@@ -74,6 +75,8 @@ h1 {
     flex-direction: column;
     align-items: center; /* Center the "Food" text under each image */
     position: relative;
+    max-width: 100%;
+    height: auto; 
 }
 
 .menu-food-imgs p {
@@ -87,6 +90,8 @@ h1 {
 img {
     width: 250px;
     background-color: rgba(38, 19, 19, 0.5);
+    max-width: 100%;
+    height: auto;
 }
 
 #restaurant-summary {

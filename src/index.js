@@ -1,4 +1,7 @@
-import foodImage from "./images/tinytrans.gif";
+import foodImage from './images/tinytrans.gif';
+const imgElement = document.createElement("img");
+imgElement.src = foodImage;
+
 
 const Pages = (() => {
     const content = document.querySelector("#content");
@@ -61,5 +64,6 @@ function startApp() {
     Navigation.switchTab("home"); // Load the home page by default
     Navigation.setupNavigation(); // Set up the navigation buttons
 }
+
 
 startApp();

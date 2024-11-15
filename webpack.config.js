@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
-  mode: "development",
+  mode: "production",
   entry: "./src/index.js",
   output: {
     filename: "[name].[contenthash].js",
@@ -40,6 +40,10 @@ module.exports = {
     }),
   ],
   optimization: {
+    minimize: true, // Minify JavaScript and CSS
+    splitChunks: {
+      chunks: 'all', // Automatically split large chunks into smaller ones for optimization
+    },
     minimizer: [
       `...`, // Keeps the default JavaScript minimizer (TerserPlugin)
       new CssMinimizerPlugin(), // Minify CSS for production
