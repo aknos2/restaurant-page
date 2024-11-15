@@ -81,7 +81,7 @@ export const displayMenuPage = () => {
             <p class="price-text">$10</p>
             <p class="food-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, odit?</p>
         </div>
-        <img src="./images/tinytrans.gif" alt="">
+        <img src="${foodImage}" alt="">
     </div>
 
     <hr class="hr-text">
