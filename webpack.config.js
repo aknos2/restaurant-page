@@ -1,11 +1,13 @@
 const path = require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
   mode: "development",
   entry: "./src/index.js",
   output: {
-    filename: "main.js",
+    filename: "[name].[contenthash].js",
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
@@ -13,16 +15,11 @@ module.exports = {
   devServer: {
     watchFiles: ["./src/main-page.html"],
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: "./src/main-page.html",
-    }),
-  ],
   module: {
     rules: [
         {
             test: /\.css$/i,
-            use: ["style-loader", "css-loader"],
+            use: [ MiniCssExtractPlugin.loader, "css-loader"],
         },
         {
             test: /\.html$/i,
@@ -34,4 +31,19 @@ module.exports = {
         },
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./src/main-page.html",
+    }),
+    new MiniCssExtractPlugin({
+      filename: "[name].[contenthash].css",
+    }),
+  ],
+  optimization: {
+    minimizer: [
+      `...`, // Keeps the default JavaScript minimizer (TerserPlugin)
+      new CssMinimizerPlugin(), // Minify CSS for production
+    ],
+  },
+  mode: "production",
 };
